@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+
+  mysql:
+    image: mysql:8.0
+    env_file:
+      - "env"
+    networks:
+      - back-net
+    volumes: 
+      - mysql-data:/var/lib/mysql
+
+  web:
+    depends_on: 
+      - mysql
+    image: metfan1981/apache:latest
+    ports:
+      - "8080:80"
+    env_file:
+      - "env"
+    networks:
+      - front-net
+      - back-net
+    volumes: 
+      - html-pages:/var/www/html
+    links:
+      - mysql
+
+networks:
+  front-net:
+  back-net:
+
+volumes: 
+  mysql-data: {}
+  html-pages: {}  
