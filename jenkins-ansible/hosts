@@ -1,0 +1,2 @@
+[hosts]
+remote-host-1 ansible_host=       ##############
