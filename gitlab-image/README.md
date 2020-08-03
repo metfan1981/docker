@@ -11,6 +11,6 @@ GitLab Runner runs directly on underlying host (runner must be pre-installed).
 Edit **gitlab-runner-register.sh** variables to correspond your parameters:
 - TOKEN
 - DESCRIPTION
-- CONTAINER_IP
+- SERVER_CONTAINER_IP
 
 Execute script: `./gitlab-runner-register.sh`
