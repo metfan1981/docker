@@ -1,4 +1,5 @@
 GitLab Server runs in container; parameters are specified in docker-compose file.
+
 GitLab Runner runs directly on underlying host (runner must be pre-installed).
 
 ##### Install Runner
